@@ -6,7 +6,7 @@ module SimpleTweet
 	@@app_name = nil
 
 	def self.setup(hash)
-		@@client = Twitter::REST.new do |config|
+		@@client = Twitter::REST::Client.new do |config|
 			config.consumer_key        = hash[:consumer_key]
 			config.consumer_secret     = hash[:consumer_secret]
 			config.access_token        = hash[:access_token]
